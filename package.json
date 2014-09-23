@@ -1,0 +1,23 @@
+{
+  "name": "HTML-responsive-tables",
+  "version": "0.0.1",
+  "description": "A collection of HTML responsive tables and a detailed description of the code (HTML markup, CSS)'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "keywords": [
+    "HTML5",
+    "tables",
+    "CSS",
+    "responsive",
+    "development",
+    "Semantic"
+  ],
+  "author": "Eric Njanga",
+  "license": "ISC"
+}
