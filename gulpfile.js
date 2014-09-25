@@ -4,12 +4,9 @@
 */
 
 //tasks variables ..............................................................
-var gulp 		= require('gulp'),
-	gutil 		= require('gulp-util'),  
-	connect 	= require('gulp-connect'),
-	concat 		= require('gulp-concat'),
-	compass 	= require('gulp-compass'),
-	browserify 	= require('gulp-browserify')
+var gulp 		= require('gulp'), 
+	connect 	= require('gulp-connect'), 
+	compass 	= require('gulp-compass');
 
 
 //..............................................................................
@@ -37,14 +34,7 @@ if(env==='development'){
 //sources variable ..............................................................
 sources = { 
 	'sass' 		: ['components/sass/style.scss'],
-	'js' 		: [
-					'components/scripts/rclick.js',
-					'components/scripts/pixgrid.js',
-					'components/scripts/tagline.js',
-					'components/scripts/template.js'
-				],
-	'html' 		: [outputDir+'*.html'],
-	'json' 		: [outputDir+'js/*.json']
+	'html' 		: [outputDir+'*.html']
 };
 
 
@@ -52,18 +42,7 @@ sources = {
 var destinations = { 
 	'js' 		: outputDir+'js',
 	'css'		: outputDir+'css'		 
-}; 
-
-
-//javascript task ...............................................................
-gulp.task('js', function(){
-	gulp.src(sources['js']) 
-		.pipe(concat('script.js'))
-		.pipe(browserify()) 
-		.pipe(gulp.dest(destinations['js']))
-		.pipe(connect.reload()) //keeps track of any javascript activities
-});
-
+};  
 
 //compass task ..................................................................
 gulp.task('compass', function(){ 
@@ -85,8 +64,7 @@ gulp.task('compass', function(){
 
 
 //watch some activities and trigger some tasks in response ........................
-gulp.task('watch', function(){ 
-	gulp.watch(sources['js'], ['js']);
+gulp.task('watch', function(){  
 	gulp.watch('components/sass/*.scss', ['compass']);
 	gulp.watch('builds/development/*.html', ['html']);
 });
@@ -108,5 +86,5 @@ gulp.task('html', function(){
 });  
 
 //default tasks ...................................................................
-gulp.task('default', ['html', 'js', 'compass', 'connect', 'watch']);
+gulp.task('default', ['html', 'compass', 'connect', 'watch']);
 
