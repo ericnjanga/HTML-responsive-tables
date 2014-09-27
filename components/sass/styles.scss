@@ -1,0 +1,25 @@
+// styles.scss
+// ==============
+
+/*
+	Ruby gems:
+	==========
+	- Bootstrap3 (bootstrap-sass)
+	- jquery ui (compass-jquery-ui)
+*/
+    
+//Compass imports    
+@import 'compass';    
+@import 'compass/reset';                   
+
+@import 'susy'; //Grid framework for sass  
+@import 'variables'; 
+
+@import 'vendors/bootstrap';//I'm using bootstrap for now ------------- 
+  
+//Core partials 
+//@import 'mixins';
+@import 'base';
+@import 'layout';
+ 
+  

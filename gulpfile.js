@@ -5,43 +5,24 @@
 
 //tasks variables ..............................................................
 var gulp 		= require('gulp'), 
+	gutil 		= require('gulp-util'), 
 	connect 	= require('gulp-connect'), 
 	compass 	= require('gulp-compass');
 
-
-//..............................................................................
-var env,
-	sources,
-	outputDir;
-
-
-//environment variable ..........................................................
-/**
- * command for executing gulp in production environment:
- * NODE_ENV=production gulp
-*/
-env = process.env.NODE_ENV || 'development';
-
-
+ 
 //processed files destination depends on the environment ........................
-if(env==='development'){
-	outputDir = 'builds/development/'; 
-}else{
-	outputDir = 'builds/production/'; 
-}
-
+ 
 
 //sources variable ..............................................................
-sources = { 
-	'sass' 		: ['components/sass/style.scss'],
-	'html' 		: [outputDir+'*.html']
+var sources = { 
+	'sass' 		: ['components/sass/**/*.scss'],
+	'html' 		: ['builds/development/*.html']
 };
 
 
 //destinations variable .........................................................
-var destinations = { 
-	'js' 		: outputDir+'js',
-	'css'		: outputDir+'css'		 
+var destinations = {  
+	'css'		: 'builds/development/css'		 
 };  
 
 //compass task ..................................................................
@@ -73,7 +54,7 @@ gulp.task('watch', function(){
 //connect to server and live reload task ..........................................
 gulp.task('connect', function(){
 	connect.server({
-		root : outputDir,
+		root : 'builds/development/',
 		livereload : true
 	});
 });
