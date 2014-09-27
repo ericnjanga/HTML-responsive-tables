@@ -1,0 +1,40 @@
+
+/**
+*
+*
+*
+*/
+
+
+
+@mixin git_main_header(){ 
+
+   
+}
+
+  
+@mixin git_theme(){
+
+
+
+	#main-footer{
+		position: absolute;
+		bottom: 0;   
+		padding: 10px 0;    
+		background-color: #eee; 
+		width: 100%;
+		border-top: 1px solid lighten($black, 80); 
+		.brand{
+			img{
+				@include border-radius(4px, 4px);
+			}
+		}
+	}
+}
+   
+
+
+
+
+
+@include git_theme();

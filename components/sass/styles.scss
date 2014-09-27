@@ -6,8 +6,8 @@
 	==========
 	- Bootstrap3 (bootstrap-sass)
 	- jquery ui (compass-jquery-ui)
-*/
-    
+*/   
+         
 //Compass imports    
 @import 'compass';    
 @import 'compass/reset';                   
@@ -18,7 +18,7 @@
 @import 'vendors/bootstrap';//I'm using bootstrap for now ------------- 
   
 //Core partials 
-//@import 'mixins';
+@import 'mixins/eric-njanga-git-theme';
 @import 'base';
 @import 'layout';
  
