@@ -2,43 +2,62 @@
 // ==============
 
 /*
-	Ruby gems:
-	==========
-	- Bootstrap3 (bootstrap-sass)
-	- jquery ui (compass-jquery-ui)
+	Media query states ....
 */
  
-//Compass imports    
-@import 'compass';    
-@import 'compass/reset';                   
+@media only screen and (max-width: 760px){
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr{
+		display: block;
+	}
 
-@import 'susy'; //Grid framework for sass
-// @import 'susyone';
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr{
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
 
-@import 'variables';
+	tr{
+		border: 1px solid #ccc;
+	}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; /* The empty space will host the equivalent labled from 'thead tr' */ 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "First Name"; }
+	td:nth-of-type(2):before { content: "Last Name"; }
+	td:nth-of-type(3):before { content: "Job Title"; }
+}
 
-@import 'vendors/bootstrap';//I'm using bootstrap for now -------------
-@import 'vendors/jquery.ui';   
-  
-//Core partials
-@import 'need-organization/additional.scss';
-@import 'need-organization/old-styles.scss';
-@import 'mixins';
-@import 'base';
 
-@import 'layouts/main-header'; 
-@import 'layouts/section1'; 
-@import 'layouts/section2'; 
-@import 'layouts/section3'; 
-@import 'layouts/section4'; 
 
-@import 'modules/my-own-scenario-table'; 
-@import 'modules/HSA-plans'; 
-@import 'modules/print';
-@import 'IE8-support';
- 
- 
- 
-// // JS partials
-// @import 'pixgrid';
-// @import 'rclick';
+
+
+
+
+
+
+
+
+
+

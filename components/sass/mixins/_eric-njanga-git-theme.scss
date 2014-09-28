@@ -14,11 +14,14 @@
 
   
 @mixin git_theme(){
+	body{
+		padding: 55px 0;
+	}
 
 
 
 	#main-footer{
-		position: absolute;
+		position: fixed;
 		bottom: 0;   
 		padding: 10px 0;    
 		background-color: #eee; 

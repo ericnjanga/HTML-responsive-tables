@@ -24,7 +24,7 @@
         <![endif]-->
     </head>
     <body> 
-  		<header id="main-header" class="navbar navbar-default navbar-static-top" role="navigation">
+  		<header id="main-header" class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -38,9 +38,9 @@
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#about">Table1</a></li>
-                        <li><a href="#contact">Table2</a></li>
-                        <li><a href="#">Table3</a></li>
+                        <li class="active"><a href="#table1">Table1</a></li>
+                        <li><a href="#table2">Table2</a></li>
+                        <li><a href="#table3">Table3</a></li>
 <!--                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -66,9 +66,131 @@
             </div><!-- container -->      
         </header>
 
-        <div id="main-content">
-          
-        </div>
+
+
+
+
+        <div id="main-content" class="container">
+            <section id="table1">
+                <a name="table1"></a>
+                <h2>Case 1 : Each row becomes a table</h2>
+                <p>In this case, we've already figured out our <b class="highlight">minimum table width is about 760px</b> so we'll set up our media query to take effect when the screen gets narrower than that.</p>
+                <p>We are going to force the table to not behave like a table by setting every table-related element to be block-level. It's kind of like each table row becomes a table in itself, but only as wide as the screen. No more horizontal scrolling!</p>
+                <p>Then for each "cell", we'll use CSS generated content (:before) to apply the label, so we know what each bit of data means.</p>
+
+
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Job Title</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Rocky</td>
+                        <td>Balboa</td>
+                        <td>Boxer</td>
+                    </tr>
+                    <tr>
+                        <td>Bruce</td>
+                        <td>Wayne</td>
+                        <td>CEO</td>
+                    </tr>
+                    <tr>
+                        <td>James</td>
+                        <td>Matman</td>
+                        <td>Chief Sandwich Eater</td>
+                    </tr>
+                    <tr>
+                        <td>The</td>
+                        <td>Tick</td>
+                        <td>Crimefighter Sorta</td>
+                    </tr>
+                    <tr>
+                        <td>Tony</td>
+                        <td>Stark</td>
+                        <td>CEO</td>
+                    </tr>
+                    <tr>
+                        <td>The</td>
+                        <td>Jocker</td>
+                        <td>Criminal</td>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Parker</td>
+                        <td>Photographer</td>
+                    </tr>
+                    <tr>
+                        <td>The</td>
+                        <td>Blade</td>
+                        <td>Vigilante</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section><!-- table1 -->
+
+           
+
+
+            <section id="table2">
+                <a name="table2"></a>
+                <b>table2</b>
+            </section><!-- table2 -->
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <section id="table3">
+                <a name="table3"></a>
+                <b>table3</b>
+            </section><!-- table3 -->
+        </div><!-- #main-content --> 
+
+
+
+
 
         <footer id="main-footer">
             <div class="container">
